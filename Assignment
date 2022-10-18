@@ -1,0 +1,29 @@
+#This program creates an LMS that allows the user to borrow, return and check inventory of books
+available_books = [{'title': 'Atomic Habits', 'count': 5}, {'title': 'The river and the source', 'count': 7}]
+
+def borrow_book(title):
+    if title is not None:
+        #check if title matches the book available
+        for book in available_books:
+            if book['title'] == title and book['count'] > 0:
+                print("There are" + book['count'] + 'copies')
+                print("How many copies would you like to borrow")
+                copies = input()
+                book['count'] -= copies
+                print("you have borrowed succesfully")
+    else : print("You didn't enter a title")
+
+print("Enter the title of book to borrow")
+book_title = input()
+
+borrow_book(book_title)
+
+#To run this program, insert Assignment.py in the command prompt
+
+
+
+
+
+
+    
+
